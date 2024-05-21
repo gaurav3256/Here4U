@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class BlogsController extends Controller
@@ -11,7 +12,8 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        return view('front-end.pages.blogs');
+        $blogs = Blog::where('is_published', true)->with('user')->get();
+        return view('front-end.pages.blogs', compact('blogs'));
     }
 
     /**
@@ -35,7 +37,8 @@ class BlogsController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $blog = Blog::findOrFail($id);
+        return view('front-end.pages.blog-detail', compact('blog'));
     }
 
     /**

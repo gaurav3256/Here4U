@@ -12,7 +12,7 @@
     <!-- Our Blog Starts Here --->
     <section class="our-blog">
         <div class="container">
-            <x-blogs />
+            <x-blogs :blogs="$blogs" />
         </div>
     </section>
 @endsection

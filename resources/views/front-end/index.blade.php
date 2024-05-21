@@ -62,7 +62,10 @@
             <div class="session-title row">
                 <h2>Meet Our Dedicated Team</h2>
                 <p>
-                    At Here4U, we are driven by a shared passion for making a positive impact in our community. Our team is composed of dynamic and compassionate individuals, each bringing unique skills and perspectives to our mission. Together, we work tirelessly to raise awareness, provide support, and create lasting change. Get to know the inspiring people behind Here4U.
+                    At Here4U, we are driven by a shared passion for making a positive impact in our community. Our team is
+                    composed of dynamic and compassionate individuals, each bringing unique skills and perspectives to our
+                    mission. Together, we work tirelessly to raise awareness, provide support, and create lasting change.
+                    Get to know the inspiring people behind Here4U.
                 </p>
             </div>
             <div class="row team-row">
@@ -83,7 +86,7 @@
                 <h2> Our Blog </h2>
                 <p>Take a look at what people say about US </p>
             </div>
-            <x-blogs />
+            <x-blogs :blogs="$blogs" />
         </div>
     </section>
 @endsection
