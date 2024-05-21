@@ -1,21 +1,21 @@
 <?php
 
-namespace App\Filament\Resources\CollectionResource\Pages;
+namespace App\Filament\Resources\UserResource\Pages;
 
-use App\Filament\Resources\CollectionResource;
+use App\Filament\Resources\UserResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Builder;
 
-class ListCollections extends ListRecords
+class ListUsers extends ListRecords
 {
-    protected static string $resource = CollectionResource::class;
+    protected static string $resource = UserResource::class;
 
     protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make()
-                ->icon('heroicon-o-folder-plus'),
+                ->icon('heroicon-o-user-plus'),
         ];
     }
 

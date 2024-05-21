@@ -8,15 +8,15 @@
     <x-about-us />
 
     <!-- Events Start Here --->
-    <section class="events">
+    {{-- <section class="events">
         <div class="container">
             <div class="session-title row">
                 <h2>Popular Causes</h2>
-                <p>We are a non-profital & Charity raising money for child education</p>
+                <p>We are a non-profit organization dedicated to raising funds for child education.</p>
             </div>
             <x-events />
         </div>
-    </section>
+    </section> --}}
     <!-- Events End Here --->
 
     <!-- Charity Number Starts Here --->
@@ -26,9 +26,8 @@
                 <div class="row session-title">
                     <h2>Our Achievemtns in Numbers</h2>
                     <p>
-                        We can talk for a long time about advantages of our Dental clinic before other medical treatment
-                        facilities.
-                        But you can read the following facts in order to make sure of all pluses of our clinic:
+                        Our journey has been marked by significant milestones and accomplishments. Here are some key numbers
+                        that reflect our impact and dedication:
                     </p>
                 </div>
                 <!-- Charity Number Starts Here --->
@@ -62,10 +61,10 @@
             <div class="session-title row">
                 <h2>Meet Our Dedicated Team</h2>
                 <p>
-                    At Here4U, we are driven by a shared passion for making a positive impact in our community. Our team is
-                    composed of dynamic and compassionate individuals, each bringing unique skills and perspectives to our
+                    At Here4U, we are united by a shared passion for making a positive impact in our community. Our team
+                    consists of dynamic and compassionate individuals, each bringing unique skills and perspectives to our
                     mission. Together, we work tirelessly to raise awareness, provide support, and create lasting change.
-                    Get to know the inspiring people behind Here4U.
+                    Meet the inspiring people behind Here4U.
                 </p>
             </div>
             <div class="row team-row">
@@ -83,8 +82,8 @@
     <section class="our-blog">
         <div class="container">
             <div class="row session-title">
-                <h2> Our Blog </h2>
-                <p>Take a look at what people say about US </p>
+                <h2>Our Blog</h2>
+                <p>Stay updated with the latest news and stories from Here4U.</p>
             </div>
             <x-blogs :blogs="$blogs" />
         </div>

@@ -29,15 +29,19 @@
                             <a href="https://www.youtube.com/@Here4u.jaipur"><i class="fab fa-youtube"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/here4u.jaipur?igsh=MTI4b2ZjZDJ2ZGFnNg=="><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/here4u.jaipur?igsh=MTI4b2ZjZDJ2ZGFnNg=="><i
+                                    class="fab fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/here4u-jaipur-2b19b6292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                            <a
+                                href="https://www.linkedin.com/in/here4u-jaipur-2b19b6292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                    class="fab fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVbwZt6JzbWxkhIBg120956GStyBfO6LEmTq4Wo2o1dqJiYw/viewform" class="btn btn-sm btn-success" >Join Us</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVbwZt6JzbWxkhIBg120956GStyBfO6LEmTq4Wo2o1dqJiYw/viewform"
+                        class="btn btn-sm btn-success">Join Us</a>
                 </div>
             </div>
         </div>
@@ -59,12 +63,14 @@
                             <a class="nav-link" href="{{ route('index') }}">Home
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('about-us.index') }}">About Us</a>
                         </li>
-                        <li class="nav-item">
+
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('events.index') }}">Events</a>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('gallery.index') }}">Gallery</a>
@@ -73,6 +79,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('blogs.index') }}">Blog</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('contact-us.index') }}">Contact US</a>
                         </li>
