@@ -4,44 +4,27 @@
         <div class="row">
             <div class="gallery-filter d-none d-sm-block">
                 <button class="btn btn-default filter-button" data-filter="all">All</button>
-                <button class="btn btn-default filter-button" data-filter="hdpe">Finance</button>
-                <button class="btn btn-default filter-button" data-filter="sprinkle">Digital Marketing</button>
-                <button class="btn btn-default filter-button" data-filter="spray"> Money</button>
-                <button class="btn btn-default filter-button" data-filter="irrigation">Business Alaysis</button>
+                @foreach ($collections as $collection)
+                    <button class="btn btn-default filter-button" data-filter="{{ Str::slug($collection->name) }}">
+                        {{ $collection->name }}
+                    </button>
+                @endforeach
             </div>
             <br />
 
-            <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter hdpe">
-                <img src="{{ asset('assets/images/events/image_01.jpg') }}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter sprinkle">
-                <img src="{{ asset('assets/images/events/image_02.jpg') }}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter hdpe">
-                <img src="{{ asset('assets/images/events/image_01.jpg') }}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter irrigation">
-                <img src="{{ asset('assets/images/events/image_03.jpg') }}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter spray">
-                <img src="{{ asset('assets/images/events/image_04.jpg') }}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter spray">
-                <img src="{{ asset('assets/images/events/image_05.jpg') }}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter irrigation">
-                <img src="{{ asset('assets/images/events/image_06.jpg') }}" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-3 col-md-4 col-sm-3 col-xs-6 filter irrigation">
-                <img src="{{ asset('assets/images/events/image_07.jpg') }}" class="img-responsive">
-            </div>
+            @foreach ($collections as $collection)
+                @foreach ($collection->media as $media)
+                    @if (is_array($media->path))
+                        <!-- Check if $media->path is an array -->
+                        @foreach ($media->path as $image)
+                            <div
+                                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter {{ Str::slug($collection->name) }}">
+                                <img src="{{ asset('storage/' . $image) }}" class="img-responsive">
+                            </div>
+                        @endforeach
+                    @endif
+                @endforeach
+            @endforeach
         </div>
     </div>
 </div>

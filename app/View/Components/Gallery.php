@@ -8,12 +8,13 @@ use Illuminate\View\Component;
 
 class Gallery extends Component
 {
+    public $collections;
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($collections)
     {
-        //
+        $this->collections = $collections;
     }
 
     /**
