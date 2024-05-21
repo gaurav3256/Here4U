@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Collection;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
@@ -11,7 +12,11 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        return view('front-end.pages.gallery');
+        // Fetch all collections with images
+        $collections = Collection::with('media')->get();
+
+        // Pass the collections to the view
+        return view('front-end.pages.gallery', compact('collections'));
     }
 
     /**
