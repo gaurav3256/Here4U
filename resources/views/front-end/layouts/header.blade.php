@@ -2,18 +2,12 @@
     <div class="header-top">
         <div class="container">
             <div class="row col-det">
-                <div class="col-lg-6 d-none d-lg-block">
+                <div class="col-lg-8 d-none d-lg-block">
                     <ul class="ulleft">
                         <li>
                             <i class="far fa-envelope"></i>
                             Here4u.jaipur@gmail.com
-                            <span>|</span>
                         </li>
-                        <li>
-                            <i class="fas fa-phone-volume"></i>
-                            +72199 99099
-                        </li>
-                        <li>+86194 12780</li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 folouws">
@@ -39,7 +33,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
+                <div class="col-lg-1 d-none d-md-block col-md-6 btn-bhed">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVbwZt6JzbWxkhIBg120956GStyBfO6LEmTq4Wo2o1dqJiYw/viewform"
                         class="btn btn-sm btn-success">Join Us</a>
                 </div>
