@@ -176,9 +176,11 @@ class BlogsResource extends Resource
                 Tables\Actions\DeleteAction::make()
                     ->successNotification(
                         Notification::make()
-                            ->success()
                             ->title('Blog Deleted')
-                            ->body('The blog post has been deleted successfully.'),
+                            ->body('The blog post has been deleted successfully.')
+                            ->success()
+                            ->icon('heroicon-o-check-circle')
+                            ->duration('3000'),
                     ),
             ])
             ->bulkActions([

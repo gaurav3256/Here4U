@@ -25,9 +25,11 @@ class CreateBlogs extends CreateRecord
 
     protected function getCreatedNotification(): ?Notification
     {
-        return Notification::make()->title('Blog Created Successfully')
-            ->success()
+        return Notification::make()
+            ->title('Blog Created Successfully')
             ->body('Your blog post has been created and published successfully.')
+            ->success()
+            ->icon('heroicon-o-check-circle')
             ->duration('3000')
             ->send();
     }

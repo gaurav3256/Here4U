@@ -76,9 +76,11 @@ class MediaResource extends Resource
                 Tables\Actions\DeleteAction::make()
                     ->successNotification(
                         Notification::make()
-                            ->success()
                             ->title('Media Deleted')
-                            ->body('The media has been deleted successfully.'),
+                            ->body('The media has been deleted successfully.')
+                            ->success()
+                            ->icon('heroicon-o-check-circle')
+                            ->duration('3000'),
                     ),
             ])
             ->bulkActions([

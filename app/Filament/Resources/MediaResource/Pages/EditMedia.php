@@ -25,9 +25,11 @@ class EditMedia extends EditRecord
 
     protected function getSavedNotification(): ?Notification
     {
-        return Notification::make()->title('Media Updated Successfully')
-            ->success()
+        return Notification::make()
+            ->title('Media Updated Successfully')
             ->body('Your media has been updated and saved successfully.')
+            ->success()
+            ->icon('heroicon-o-check-circle')
             ->duration('3000')
             ->send();
     }

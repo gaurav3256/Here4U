@@ -1,26 +1,26 @@
 <?php
 
-namespace App\Filament\Resources\CollectionResource\Pages;
+namespace App\Filament\Resources\TeamResource\Pages;
 
-use App\Filament\Resources\CollectionResource;
+use App\Filament\Resources\TeamResource;
 use Filament\Actions;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\CreateRecord;
 
-class CreateCollection extends CreateRecord
+class CreateTeam extends CreateRecord
 {
-    protected static string $resource = CollectionResource::class;
+    protected static string $resource = TeamResource::class;
 
     protected function getRedirectUrl(): string
     {
-        return CollectionResource::getUrl('index');
+        return TeamResource::getUrl('index');
     }
 
     protected function getCreatedNotification(): ?Notification
     {
         return Notification::make()
-            ->title('Collection Created Successfully')
-            ->body('Your collection has been created successfully.')
+            ->title('Member Created Successfully')
+            ->body('New team member has been created and saved successfully.')
             ->success()
             ->icon('heroicon-o-check-circle')
             ->duration('3000')

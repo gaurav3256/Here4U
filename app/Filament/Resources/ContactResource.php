@@ -20,8 +20,8 @@ class ContactResource extends Resource
 {
     protected static ?string $model = Contact::class;
     protected static ?string $navigationIcon = 'heroicon-o-envelope-open';
-    protected static?string $navigationLabel = 'Contacts';
-    protected static?string $navigationGroup = 'Users';
+    protected static ?string $navigationLabel = 'Contacts';
+    protected static ?string $navigationGroup = 'Users';
 
     public static function form(Form $form): Form
     {
@@ -49,9 +49,11 @@ class ContactResource extends Resource
                 Tables\Actions\DeleteAction::make()
                     ->successNotification(
                         Notification::make()
-                            ->success()
                             ->title('Contact Deleted')
-                            ->body('The contact has been deleted successfully.'),
+                            ->body('The contact has been deleted successfully.')
+                            ->success()
+                            ->icon('heroicon-o-check-circle')
+                            ->duration('3000'),
                     ),
             ])
             ->bulkActions([

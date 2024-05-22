@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,9 @@ class HomeController extends Controller
     public function index()
     {
         $blogs = Blog::where('is_published', true)->with('user')->get();
-        return view('front-end.index', compact('blogs'));
+        $teamMembers = Team::all();
+
+        return view('front-end.index', compact('blogs', 'teamMembers'));
     }
 
     /**

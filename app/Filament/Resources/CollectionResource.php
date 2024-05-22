@@ -60,9 +60,11 @@ class CollectionResource extends Resource
                 Tables\Actions\DeleteAction::make()
                     ->successNotification(
                         Notification::make()
-                            ->success()
                             ->title('Collection Deleted')
-                            ->body('The collection has been deleted successfully.'),
+                            ->body('The collection has been deleted successfully.')
+                            ->success()
+                            ->icon('heroicon-o-check-circle')
+                            ->duration('3000'),
                     ),
             ])
             ->bulkActions([

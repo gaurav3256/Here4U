@@ -1,5 +1,45 @@
 @extends('front-end.layouts.master')
 
+@section('style')
+    <style>
+        .team-row-wrapper {
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* Internet Explorer 10+ */
+        }
+
+        .team-row-wrapper::-webkit-scrollbar {
+            display: none;
+            /* Safari and Chrome */
+        }
+
+        .team-row {
+            display: inline-flex;
+            flex-wrap: nowrap;
+        }
+
+        .team-row .col-md-3,
+        .team-row .col-sm-6 {
+            flex: 0 0 25%;
+            /* Ensures 4 items per row */
+            max-width: 25%;
+            box-sizing: border-box;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .single-usr {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 1rem;
+            /* Adjust spacing between cards */
+        }
+    </style>
+@endsection
+
 @section('content')
     <!-- Slider Starts Here -->
     @include('front-end.layouts.slider')
@@ -67,11 +107,20 @@
                     Meet the inspiring people behind Here4U.
                 </p>
             </div>
-            <div class="row team-row">
-                <div class="col-md-12">
-                    <div class="single-usr">
-                        <img src="{{ asset('assets/images/team/team.jpg') }}" alt="">
-                    </div>
+            <div class="team-row-wrapper">
+                <div class="row team-row">
+                    @foreach ($teamMembers as $teamMember)
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-usr">
+                                <img src="{{ asset('storage/' . $teamMember->image) }}" alt="{{ $teamMember->name }}">
+                                <div class="det-o">
+                                    <h4>{{ $teamMember->name }}</h4>
+                                    <i>{{ $teamMember->email }}</i>
+                                    <p>{{ $teamMember->phone }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

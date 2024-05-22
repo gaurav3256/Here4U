@@ -18,9 +18,11 @@ class CreateMedia extends CreateRecord
 
     protected function getCreatedNotification(): ?Notification
     {
-        return Notification::make()->title('Media Uploaded Successfully')
-            ->success()
+        return Notification::make()
+            ->title('Media Uploaded Successfully')
             ->body('Your media has been uploaded successfully.')
+            ->success()
+            ->icon('heroicon-o-check-circle')
             ->duration('3000')
             ->send();
     }
