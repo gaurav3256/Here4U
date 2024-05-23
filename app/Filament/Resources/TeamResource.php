@@ -46,19 +46,19 @@ class TeamResource extends Resource
                             ->label('Email')
                             ->email()
                             ->placeholder('Enter member email address')
-                            ->rules('required|email|unique:teams,email|min:3')
+                            ->rules('email|unique:teams,email|min:3')
                             ->validationMessages([
-                                'required' => 'Please enter :attribute',
+                                // 'required' => 'Please enter :attribute',
                                 'email' => 'Please enter valid email only',
                                 'unique' => 'This email is already registered',
                                 'min' => 'The :attribute must be at least :min characters',
                             ]),
                         TextInput::make('phone')
                             ->label('Phone Number')
-                            ->placeholder('Enter your phone number')
-                            ->rules('required|digits:10')
+                            ->placeholder('Enter your phone number')    
+                            ->rules('digits:10')
                             ->validationMessages([
-                                'required' => 'Please enter :attribute',
+                                // 'required' => 'Please enter :attribute',
                                 'digits' => 'Phone number must be exactly :digits digits',
                             ]),
                         FileUpload::make('image')
