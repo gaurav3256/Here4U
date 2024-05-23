@@ -115,8 +115,8 @@
                                 <img src="{{ asset('storage/' . $teamMember->image) }}" alt="{{ $teamMember->name }}">
                                 <div class="det-o">
                                     <h4>{{ $teamMember->name }}</h4>
-                                    <i>{{ $teamMember->email }}</i>
-                                    <p>{{ $teamMember->phone }}</p>
+                                    <i>{{ $teamMember->email ?? '' }}</i>
+                                    <p>{{ $teamMember->phone ?? ''}}</p>
                                 </div>
                             </div>
                         </div>
